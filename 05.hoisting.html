@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hoisting</title>
+</head>
+
+<body>
+    <script>
+        //console.log(text)
+        //得到Uncaught ReferenceError: text is not defined
+
+        /*console.log(text)
+        const text = 'abc'*/
+        // 上面兩行執行會得到Uncaught ReferenceError: Cannot access 'text' before initialization
+
+        /* console.log(text)
+        var text = 'abc'*/
+        //得到undefined（只要有在後面用var宣告，前面就會是undefined）
+
+        /*console.log(text)
+        text = 'abc'*/
+        // 得到：eferenceError: text is not defined
+
+        text = 'abc'
+        console.log(text)
+        //得到abc，可用！
+
+        //function declartaion 會提升
+        hi('AAA')
+        function hi(name) {
+            console.log('hi,' + name)
+        }
+
+        //function expression
+        console.log(hi2)//undefined
+        hi2('BBB')
+        var hi2 = function (name) {
+            console.log('hi, ' + name)
+        }
+        //得到TypeError: hi2 is not a function
+
+    </script>
+</body>
+
+</html>

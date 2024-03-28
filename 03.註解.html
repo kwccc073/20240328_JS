@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CH7註解_JSDoc</title>
+</head>
+
+<body>
+    <script>
+        // 下面這個註解格式叫做JSdoc，打code時可以提供提示
+        /**
+         * 早安
+         * */
+        const GoodMorning = () => { }
+        GoodMorning()
+
+        /**
+         * 早安
+         * @param time 時間
+         * @param item 物品
+         */
+        const GoodMorning2 = (time, item) => { }
+        GoodMorning2('aaa', 'bbb')
+
+        //{string}提示輸入的型態應為字串
+        /**
+        * 早安
+        * @param time {string} 時間
+        * @param item {string} 物品
+        */
+        const GoodMorning3 = (time, item) => { }
+        GoodMorning3('aaa', 'bbb')
+
+        //[time=早上]表示time的預設值為早上，code提示會多?，表示這裡示選填（沒填會有預設值）
+        /**
+        * 早安
+        * @param [time=早上]{string} 時間
+        * @param [item=冰淇淋]{string} 物品
+        */
+        const GoodMorning4 = (time, item) => { }
+        GoodMorning4()
+
+        /**
+        * 早安
+        * @param [time=早上]{string} 時間
+        * @param [item=冰淇淋]{string} 物品
+        * @returns {string} 組合完的訊息
+        */
+        const GoodMorning5 = (time, item) => { }
+        GoodMorning5()
+    </script>
+
+</body>
+
+</html>
