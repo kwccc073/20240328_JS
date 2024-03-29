@@ -22,6 +22,20 @@
 
         const result = isPalindrome(prompt('輸入文字'))
         console.log(result)
+
+        // 老師解法
+        const isPalindrome2 = (text) => {
+            //檢查前半和後半是否一樣
+            for (let i = 0; i < text.length / 2; i++) {
+                if (text[i] !== text[text.length - 1 - i]) {
+                    return false
+                }
+            }
+            return true
+        }
+
+        const result2 = isPalindrome(prompt('輸入文字'))
+        console.log(result)
     </script>
 </body>
 
